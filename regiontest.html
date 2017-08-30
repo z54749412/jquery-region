@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery/jquery-3.2.0.min.js"></script>
+	<script src="./jquery-region/jquery.region.js"></script>
+</head>
+<body>
+    <h1>插件以来jquery，使用前先引入jquery</h1>
+	<div id="hometown">
+        <!-- 这里的data-id为对应的省、市、县的编码 -->
+		<select id="p" data-id="">
+			<option value="">请选择省市</option>
+		</select>
+		<select id="c" data-id="">
+			<option value="">请选择市</option>
+		</select>
+		<select id="d" data-id="">
+			<option value="">请选择区/县</option>
+		</select>
+	</div>
+	<script>
+		$( '#hometown' ).region({
+            //请求为当前文件夹已经写好的json文件
+			url: './jquery-region/region.json'
+		});
+
+	</script>
+</body>
+</html>
